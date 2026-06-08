@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello, this is Justin</title>
+  <title>Hello, this is Justin.</title>
   <meta name="description" content="Operations and program management leader based in San Francisco. Building systems that hold under pressure." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,9 @@
       --ink-3:      #a8a49e;
       --surface:    #f8f6f2;
       --rule:       rgba(26,25,23,0.10);
-      --accent:     #1a1917;
+      --accent:     #32537a;
+      --accent-mid: #32537a;
+      --accent-soft:#32537a;
       --serif:      'Instrument Serif', Georgia, serif;
       --sans:       'DM Sans', system-ui, sans-serif;
       --max:        760px;
@@ -39,7 +41,7 @@
     a { color: inherit; text-decoration: none; }
     a:hover { opacity: 0.65; }
 
-    /* ── Nav ── */
+    /* Nav */
     nav {
       max-width: var(--max);
       margin: 0 auto;
@@ -47,7 +49,7 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      border-bottom: 0.5px solid var(--rule);
+      border-bottom: 0.5px solid var(--accent-soft);
     }
 
     .nav-name {
@@ -70,85 +72,58 @@
       transition: color 0.15s;
     }
 
-    .nav-links a:hover { color: var(--ink); opacity: 1; }
+    .nav-links a:hover { color: var(--accent); opacity: 1; }
 
-    /* ── Hero ── */
+    /* Hero */
     .hero {
       max-width: var(--max);
       margin: 0 auto;
       padding: 80px 0 72px;
-      border-bottom: 0.5px solid var(--rule);
+      border-bottom: 0.5px solid var(--accent-soft);
+      display: flex;
+      align-items: center;
+      gap: 52px;
     }
+
+    .hero-photo {
+      flex-shrink: 0;
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 1.5px solid var(--accent);
+    }
+
+    .hero-text { flex: 1; }
 
     .hero-label {
       font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--ink-3);
-      margin-bottom: 24px;
+      color: var(--accent);
+      margin-bottom: 16px;
     }
 
-    .hero-headline {
+    .hero-name {
       font-family: var(--serif);
-      font-size: clamp(36px, 6vw, 56px);
+      font-size: clamp(32px, 5vw, 48px);
       font-weight: 400;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      margin-bottom: 28px;
-      max-width: 580px;
-    }
-
-    .hero-headline em {
-      font-style: italic;
-      color: var(--ink-2);
+      margin-bottom: 16px;
     }
 
     .hero-sub {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 300;
       line-height: 1.75;
       color: var(--ink-2);
-      max-width: 480px;
-      margin-bottom: 40px;
+      max-width: 440px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-family: var(--sans);
-      font-size: 13px;
-      font-weight: 400;
-      padding: 9px 18px;
-      border-radius: 2px;
-      border: 0.5px solid var(--ink);
-      color: var(--ink);
-      background: transparent;
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-      letter-spacing: 0.01em;
-    }
-
-    .btn:hover { background: var(--ink); color: var(--surface); opacity: 1; }
-
-    .btn-fill {
-      background: var(--ink);
-      color: var(--surface);
-    }
-
-    .btn-fill:hover { background: #3a3834; opacity: 1; }
-
-    .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
-
-    /* ── About ── */
+    /* About */
     .about {
       max-width: var(--max);
       margin: 0 auto;
@@ -156,7 +131,7 @@
       display: grid;
       grid-template-columns: 160px 1fr;
       gap: 48px;
-      border-bottom: 0.5px solid var(--rule);
+      border-bottom: 0.5px solid var(--accent-soft);
     }
 
     .section-label {
@@ -164,7 +139,7 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--ink-3);
+      color: var(--accent);
       padding-top: 5px;
     }
 
@@ -183,7 +158,7 @@
       color: var(--ink);
     }
 
-    /* ── Skills ── */
+    /* Skills */
     .skills {
       max-width: var(--max);
       margin: 0 auto;
@@ -191,7 +166,7 @@
       display: grid;
       grid-template-columns: 160px 1fr;
       gap: 48px;
-      border-bottom: 0.5px solid var(--rule);
+      border-bottom: 0.5px solid var(--accent-soft);
     }
 
     .tag-grid {
@@ -205,98 +180,16 @@
       font-size: 12px;
       font-weight: 400;
       padding: 5px 11px;
-      border: 0.5px solid var(--rule);
+      border: 0.5px solid var(--accent-soft);
       border-radius: 2px;
       color: var(--ink-2);
       background: transparent;
       transition: border-color 0.15s, color 0.15s;
     }
 
-    .tag:hover { border-color: var(--ink-2); color: var(--ink); }
+    .tag:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* ── Projects teaser ── */
-    .projects {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 56px 0;
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 48px;
-      border-bottom: 0.5px solid var(--rule);
-    }
-
-    .project-card {
-      border: 0.5px solid var(--rule);
-      border-radius: 2px;
-      padding: 28px;
-      margin-bottom: 12px;
-      transition: border-color 0.15s;
-      cursor: pointer;
-    }
-
-    .project-card:last-child { margin-bottom: 0; }
-    .project-card:hover { border-color: var(--ink-2); }
-
-    .project-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 12px;
-    }
-
-    .project-type {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-    }
-
-    .project-year {
-      font-size: 12px;
-      color: var(--ink-3);
-    }
-
-    .project-title {
-      font-family: var(--serif);
-      font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 8px;
-      letter-spacing: -0.01em;
-    }
-
-    .project-desc {
-      font-size: 13px;
-      font-weight: 300;
-      line-height: 1.7;
-      color: var(--ink-2);
-      margin-bottom: 18px;
-    }
-
-    .project-tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .tool-tag {
-      font-size: 11px;
-      padding: 3px 8px;
-      border: 0.5px solid var(--rule);
-      border-radius: 2px;
-      color: var(--ink-3);
-    }
-
-    .project-card-coming {
-      border: 0.5px dashed var(--rule);
-      border-radius: 2px;
-      padding: 22px 28px;
-      color: var(--ink-3);
-      font-size: 13px;
-      font-weight: 300;
-    }
-
-    /* ── Footer ── */
+    /* Footer */
     footer {
       max-width: var(--max);
       margin: 0 auto;
@@ -325,22 +218,29 @@
       transition: color 0.15s;
     }
 
-    .footer-links a:hover { color: var(--ink); opacity: 1; }
+    .footer-links a:hover { color: var(--accent); opacity: 1; }
 
-    /* ── Fade-in on load ── */
+    /* Animations */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-label   { animation: fadeUp 0.5s ease both; animation-delay: 0.05s; }
-    .hero-headline{ animation: fadeUp 0.5s ease both; animation-delay: 0.12s; }
-    .hero-sub     { animation: fadeUp 0.5s ease both; animation-delay: 0.20s; }
-    .hero-actions { animation: fadeUp 0.5s ease both; animation-delay: 0.28s; }
+    .hero-photo  { animation: fadeUp 0.5s ease both; animation-delay: 0.05s; }
+    .hero-label  { animation: fadeUp 0.5s ease both; animation-delay: 0.10s; }
+    .hero-name   { animation: fadeUp 0.5s ease both; animation-delay: 0.17s; }
+    .hero-sub    { animation: fadeUp 0.5s ease both; animation-delay: 0.24s; }
 
-    /* ── Responsive ── */
+    /* Responsive */
     @media (max-width: 560px) {
-      .about, .skills, .projects {
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        padding: 56px 0 52px;
+      }
+
+      .about, .skills {
         grid-template-columns: 1fr;
         gap: 20px;
       }
@@ -353,36 +253,21 @@
 
   <!-- Nav -->
   <nav>
-    <span class="nav-name">Justin Ross Lee</span>
+    <span class="nav-name">Hello, this is Justin.</span>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <p class="hero-label">Operations &amp; Program Management &nbsp;·&nbsp; San Francisco</p>
-    <h1 class="hero-headline">Building systems that<br><em>hold under pressure.</em></h1>
-    <p class="hero-sub">Twenty years in San Francisco across crisis services, hospitality, and behavioral research. I build the operational infrastructure that lets teams do their best work — especially when the stakes are high.</p>
-    <div class="hero-actions">
-      <a class="btn btn-fill" href="resume.pdf" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16v-8m0 8-3-3m3 3 3-3M6 20h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
-        Resume
-      </a>
-      <a class="btn" href="#projects">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg>
-        Projects
-      </a>
-      <a class="btn" href="https://linkedin.com/in/justinrosslee" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v6h-4v-6a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a class="btn" href="https://github.com/justinrosslee" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-        GitHub
-      </a>
+    <img class="hero-photo" src="images/photo.jpg" alt="Justin Ross Lee" />
+    <div class="hero-text">
+      <p class="hero-label">Operations &amp; Program Management &nbsp;·&nbsp; San Francisco</p>
+      <h1 class="hero-name">Justin Ross Lee</h1>
+      <p class="hero-sub">Twenty years in San Francisco across crisis services, hospitality, and behavioral research. I build the operational infrastructure that lets teams do their best work — especially when the stakes are high.</p>
     </div>
   </section>
 
@@ -391,65 +276,44 @@
     <span class="section-label">About</span>
     <div class="about-body">
       <p>I'm a program and operations manager with a background that spans <strong>crisis services leadership</strong>, <strong>hospitality management</strong>, and <strong>behavioral research</strong>. The thread across all of it: I build the systems, training, and infrastructure that let teams do their best work — especially when the stakes are high.</p>
-      <p>At <strong>Crisis Support Services of Alameda County</strong>, I lead a 24/7 program with 70+ staff and volunteers. I own onboarding, QA, scheduling, compliance, and data infrastructure. Before that, I spent years in San Francisco hospitality — running operations at Gestalt Haus for five years, and on opening teams at Nari and Nommo.</p>
-      <p>I hold a <strong>Psychology BA from UC Berkeley</strong> (highest distinction, Phi Beta Kappa) and served as lead research assistant on a physiological data study at the Idiographic Dynamics Lab. I'm now targeting roles in tech where operational rigor meets product thinking: onboarding, program management, contributor experience, and community ops.</p>
+      <p>At <strong>Crisis Support Services of Alameda County</strong>, I lead a 24/7 crisis line program serving Alameda County, overseeing a team of roughly 100 staff and volunteers. My work spans hiring, scheduling, onboarding, coaching, organizational infrastructure, and identifying opportunities to improve how we operate. I lead with empathy and hold accountability in equal measure — because the people on our lines and the people calling them both deserve to be met where they are.</p>
+      <p>Before that, I spent years in San Francisco hospitality — running all operations at <strong>Gestalt Haus</strong> for five years, joining the opening team at <strong>Nommo</strong>, and serving as bar lead at <strong>Nari</strong>.</p>
+      <p>I hold a <strong>Psychology BA from UC Berkeley</strong> and served as physiological data lead on a behavioral research study at the Idiographic Dynamics Lab.</p>
+      <p>Outside work: I'm a marathon runner, always training for something. Running taught me that the hard part isn't the race — it's the discipline of building toward something incrementally, day after day. I came to San Francisco from Wisconsin twenty years ago on a complete whim and never left. I love learning about other cultures, customs, and traditions — the world is so much bigger than any one experience of it, and I find that endlessly energizing rather than overwhelming.</p>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="skills">
+  <section class="skills" id="skills">
     <span class="section-label">Skills</span>
     <div class="tag-grid">
       <span class="tag">Program management</span>
+      <span class="tag">Operations management</span>
+      <span class="tag">Training &amp; development</span>
+      <span class="tag">Change management</span>
+      <span class="tag">Process improvement</span>
       <span class="tag">Onboarding systems</span>
-      <span class="tag">Distributed team ops</span>
-      <span class="tag">QA &amp; compliance</span>
-      <span class="tag">Hiring &amp; recruitment</span>
-      <span class="tag">Data analysis</span>
-      <span class="tag">SQL</span>
-      <span class="tag">Python</span>
+      <span class="tag">Team leadership</span>
+      <span class="tag">Stakeholder engagement</span>
+      <span class="tag">Quality assurance</span>
+      <span class="tag">AI workflow design</span>
       <span class="tag">Google Sheets</span>
-      <span class="tag">Airtable</span>
-      <span class="tag">Looker Studio</span>
-      <span class="tag">BigQuery</span>
+      <span class="tag">Notion</span>
       <span class="tag">Paylocity</span>
-      <span class="tag">Pinpoint ATS</span>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <span class="section-label">Projects</span>
-    <div>
-      <div class="project-card" onclick="window.location.href='projects/attendance-analysis.html'">
-        <div class="project-card-top">
-          <span class="project-type">Data &amp; Ops</span>
-          <span class="project-year">2024–2025</span>
-        </div>
-        <h2 class="project-title">Attendance analysis system</h2>
-        <p class="project-desc">End-to-end HR data pipeline for a 70-person 24/7 program — schema design, Python parser, SQL query library, and a Looker Studio dashboard for leadership.</p>
-        <div class="project-tools">
-          <span class="tool-tag">Python</span>
-          <span class="tool-tag">SQL</span>
-          <span class="tool-tag">BigQuery</span>
-          <span class="tool-tag">Looker Studio</span>
-          <span class="tool-tag">Google Sheets</span>
-        </div>
-      </div>
-
-      <div class="project-card-coming">
-        Linux workstation build — hardware selection, Ubuntu 24.04 setup, and dev environment configuration. Coming soon.
-      </div>
+      <span class="tag">SQL (foundational)</span>
+      <span class="tag">Python (foundational)</span>
+      <span class="tag">Crisis intervention</span>
+      <span class="tag">Trauma-informed care</span>
+      <span class="tag">De-escalation</span>
     </div>
   </section>
 
   <!-- Footer / Contact -->
   <footer id="contact">
-    <span class="footer-left">San Francisco, CA &nbsp;·&nbsp; Open to full-time and contract</span>
+    <span class="footer-left">Justin Ross Lee &nbsp;·&nbsp; San Francisco, CA</span>
     <div class="footer-links">
-      <a href="mailto:hello@justinrosslee.com">Email</a>
+      <a href="mailto:jstn.ross@gmail.com">Email</a>
       <a href="https://linkedin.com/in/justinrosslee" target="_blank">LinkedIn</a>
-      <a href="https://github.com/justinrosslee" target="_blank">GitHub</a>
     </div>
   </footer>
 
